@@ -33,7 +33,8 @@ module.exports = {
       'modules/core/client/app/config.js',
       'modules/core/client/app/init.js',
       'modules/*/client/*.js',
-      'modules/*/client/**/*.js'
+      'modules/*/client/**/*.js',
+      'module/forum/client/services/posts.client.service.js'
     ],
     views: ['modules/*/client/views/**/*.html'],
     templates: ['build/templates.js']

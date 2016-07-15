@@ -1,0 +1,17 @@
+<section data-ng-controller="ForumController" ng-init="find()">
+  <div class="page-header">
+    <h1>Forum</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="post in posts" class="list-group-item">
+      <button class="pull-right btn btn-danger" ng-click="delete(post)">X</button>
+      <h4 class="list-group-item-heading">{{ post.title }}</h4>
+      <p class="list-group-item-text">
+        {{ post.text }}
+      </p>
+      <small class="list-group-item-text">
+        <span>{{ post.author.displayName }}</span>
+      </small>
+    </a>
+  </div>
+</section>

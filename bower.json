@@ -1,6 +1,6 @@
 {
-  "name": "meanjs",
-  "description": "Fullstack JavaScript with MongoDB, Express, AngularJS, and Node.js.",
+  "name": "Launchbids",
+  "description": "Post Your Startup Idea & Have the World’s Best Developers Bid on Building It",
   "homepage": "http://meanjs.org/",
   "license": "MIT",
   "dependencies": {

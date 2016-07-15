@@ -1,10 +1,10 @@
 {
-  "name": "meanjs",
-  "description": "Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js.",
+  "name": "Launchbids",
+  "description": "Post Your Startup Idea & Have the World’s Best Developers Bid on Building It",
   "version": "0.4.2",
   "meanjs-version": "0.4.2",
   "private": false,
-  "author": "https://github.com/meanjs/mean/graphs/contributors",
+  "author": "Launchbids",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -42,6 +42,7 @@
     "grunt-cli": "~0.1.13",
     "helmet": "~0.9.1",
     "jasmine-core": "^2.3.4",
+    "kerberos": "0.0.21",
     "lodash": "^3.10.0",
     "method-override": "^2.3.3",
     "mocha": "~1.20.0",
@@ -113,7 +114,7 @@
     "karma-ng-html2js-preprocessor": "^0.1.2",
     "karma-phantomjs-launcher": "~0.2.0",
     "load-grunt-tasks": "^3.2.0",
-    "mock-fs": "~3.4.0",
+    "mock-fs": "~3.7.0",
     "run-sequence": "^1.1.1",
     "should": "^7.0.1",
     "supertest": "^1.0.1"
