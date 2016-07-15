@@ -11,19 +11,19 @@
   function menuConfig(Menus) {
     // Config logic
     Menus.addMenuItem('topbar',{
-      title: 'Forum',
+      title: 'Projects',
       state: 'forum',
       type: 'dropdown',
       roles: ['user', 'admin']
     });
 
     Menus.addSubMenuItem('topbar', 'forum', {
-      title: 'List Posts',
+      title: 'Project Listings',
       state: 'forum.list'
     });
 
     Menus.addSubMenuItem('topbar', 'forum', {
-      title: 'New Post',
+      title: 'New Project',
       state: 'forum.create'
     });
   }
