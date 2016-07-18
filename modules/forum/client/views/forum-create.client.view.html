@@ -1,10 +1,10 @@
 <section>
   <div class="container text-center">
-    <h3>Create New Project</h3>
+    <h1 id="create-header">Create New Project</h1>
     <form name="postForm" ng-submit="create(postForm.$valid)" novalidate action="index.html" method="post">
       <div class="form-group" show-errors>
         <label for="title"></label>
-        <input type="text" id="title" name="title" class="form-control" required placeholder="Post Title">
+        <input type="text" id="title" name="title" ng-model="title" class="form-control" required placeholder="Post Title">
         <div ng-messages="postForm.title.$errors" role="alert">
           <p class="help-block error-text" ng-message="required">
             Project Title is required.

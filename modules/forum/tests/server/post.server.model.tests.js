@@ -31,7 +31,8 @@ describe('Post Model Unit Tests:', function() {
       post = new Post({
         // Add model fields
         title: 'Sample Post',
-        text: 'Hello World'
+        text: 'Hello World',
+        created_at: new Date()
       });
 
       done();

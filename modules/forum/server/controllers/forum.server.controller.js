@@ -16,8 +16,8 @@ exports.create = function (req, res) {
   var post = new Post(req.body);
   post.author = req.user;
 
-  post.save(function(err){
-    if(err){
+  post.save(function(err) {
+    if(err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
       });

@@ -25,7 +25,13 @@ var PostSchema = new Schema({
   author: {
     type: Schema.ObjectId,
     ref: 'User'
-  }
+  },
+  created_at: {
+    type: String,
+    default: '',
+    trim: true,
+    required: 'The date cannot be blank'
+  },
 });
 
 mongoose.model('Post', PostSchema);

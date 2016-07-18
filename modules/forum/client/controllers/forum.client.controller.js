@@ -5,11 +5,12 @@
     .module('forum')
     .controller('ForumController', ForumController);
 
-  ForumController.$inject = ['$scope', 'Posts', '$location'];
+  ForumController.$inject = ['$scope', 'Posts', '$location', 'Authentication'];
 
-  function ForumController($scope, Posts, $location) {
+  function ForumController($scope, Posts, $location, Authentication) {
     var vm = this;
-
+    $scope.user = Authentication.user;
+    
     // Forum controller logic
     $scope.find = function(){
       $scope.posts = Posts.query();
@@ -24,16 +25,22 @@
       }
 
       var post = new Posts({
-        title:$scope.title,
-        text: $scope.text
+        title: $scope.title,
+        text: $scope.text,
+        created_at: new Date()
       });
 
+      // console.log(post);
       post.$save(function(response) {
-
+        // console.log("RES:" + response);
+        // console.log('SAVING..');
         $scope.title = '';
         $scope.text = '';
+        // console.log('CLEARING FIELDS..');
         $location.path('/forum');
+        // console.log('ROUTING TO FORUM..');
       }, function (errorResponse) {
+        // console.log("err: " + errorResponse);
         $scope.error = errorResponse.data.message;
       });
     };
