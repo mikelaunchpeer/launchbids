@@ -1,0 +1,20 @@
+<section data-ng-controller="ProjectsController" ng-init="find()">
+  <div class="container">
+    <div class="page-header">
+      <h1 id="project-header">Project Listings</h1>
+    </div>
+    <div class="list-group">
+      <a ng-repeat="listing in listings" class="list-group-item">
+        <button ng-show="listing.author._id === user._id" class="pull-right btn btn-danger" ng-click="delete(listing)">X</button>
+        <h4 class="list-group-item-heading">{{ listing.title }}</h4>
+        <p class="list-group-item-text">
+          {{ listing.text }}
+        </p>
+        <small class="list-group-item-text">
+          <span>{{ listing.author.displayName }}</span><br>
+          <span>{{ listing.created_at }}</span>
+        </small>
+      </a>
+    </div>
+  </div>
+</section>
