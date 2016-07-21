@@ -3,7 +3,7 @@
 // Protractor configuration
 var config = {
   framework: 'jasmine2',
-  specs: ['modules/forum/tests/e2e/*.js'],
+  specs: ['modules/projects/tests/e2e/*.js'],
 };
 
 if (process.env.TRAVIS) {

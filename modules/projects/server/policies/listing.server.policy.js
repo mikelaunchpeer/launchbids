@@ -17,7 +17,7 @@ exports.invokeRolesPolicies = function(){
     roles:['user'],
     allows:[{
       resources:'/api/listings',
-      permissions:['get', 'listing']
+      permissions:['get', 'post']
     }]
   }]);
 };

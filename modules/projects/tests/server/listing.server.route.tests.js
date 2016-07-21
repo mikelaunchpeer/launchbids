@@ -64,7 +64,7 @@ describe('Listing CRUD tests', function(){
 
   // HTTP POST /api/listings
   it('should be able to save a listing if logged in', function(done) {
-    agent.listing('/api/auth/signin')
+    agent.post('/api/auth/signin')
       .send(credentials)
       .expect(200)
       .end(function(signInErr, signInRes) {
@@ -74,7 +74,7 @@ describe('Listing CRUD tests', function(){
 
         var userId = user.id;
 
-        agent.listing('/api/listings')
+        agent.post('/api/listings')
           .send(listing)
           .expect(200)
           .end(function(listingSaveErr, listingSaveRes){
@@ -99,7 +99,7 @@ describe('Listing CRUD tests', function(){
     var listingObj = new Listing(listing);
 
     listingObj.save(function(){
-      agent.listing('/api/auth/signin')
+      agent.post('/api/auth/signin')
         .send(credentials)
         .expect(200)
         .end(function(signInErr, signInRes) {
